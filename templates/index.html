@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Позорники</title>
+    <style type="text/css">
+   TABLE {
+    width: 100%; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+   }
+   TD, TH {
+    padding: 3px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid black; /* Параметры рамки */
+   }
+   TH {
+    background: #b0e0e6; /* Цвет фона */
+   }
+  </style>
+</head>
+<body>
+<h1>Рейтинг главных позорников Протона</h1>
+<table>
+    <tr>
+        <th>ФИО</th>
+        <th>Степень позорности</th>
+    </tr>
+    {% for i in pozorniki %}
+    <tr><td>{{ i.name }}</td><td>{{ i.ochki_pozora }}</td></tr>
+    {% endfor %}
+</table>
+<footer>
+    <p>Если вы хотите дополнить этот список, то пишите на почту gimonchikadmin@i2pmail.org</p>
+</footer>
+</body>
+</html>
